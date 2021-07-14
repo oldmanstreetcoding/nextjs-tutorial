@@ -22,7 +22,7 @@ function ProductList({ productId = 100}) {
              </Link>
          </h3> 
          <h3>
-             <Link href={`/product/${productId}`}>
+             <Link href={`/product/${productId}`} replace>
                  <a>Product {productId}</a>
              </Link>
          </h3> 

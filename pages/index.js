@@ -1,6 +1,13 @@
 import Link from 'next/link'
+import { useRouter } from 'next/dist/client/router';
 
 export default function Home() {
+  const router = useRouter()
+
+  const handleClick = () => {
+    console.log('Placing Your Order');
+    router.push('/product')
+  }
     return (
       <>
         <h1>
@@ -13,6 +20,8 @@ export default function Home() {
         <Link href="/product">
           <a>Product</a>
         </Link>
+        <br/>
+        <button onClick={handleClick}>Place Order</button>
       </>
     )
 }
